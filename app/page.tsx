@@ -1,113 +1,212 @@
-import Image from "next/image";
+import Head from 'next/head'
+import Image from 'next/image'
+import styles from './Home.module.css'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+    <div className="min-h-screen bg-gray-100">
+      <Head>
+        <title>Concursy - Prepare-se para o Sucesso</title>
+        <meta
+          name="description"
+          content="Simulados para vestibulares, concursos e ENEM. A melhor preparação para os seus exames."
         />
-      </div>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <header className="bg-indigo-600 text-white shadow-lg">
+        <div className="container mx-auto px-4 py-6 flex justify-between items-center">
+          <div className="flex items-center">
+            <Image
+              src="/logo.png"
+              alt="Logo da Empresa"
+              width={50}
+              height={50}
+              className="mr-4"
+            />
+            <span className="text-2xl font-bold">Concursy</span>
+          </div>
+          <nav className="space-x-6">
+            <a
+              href="#simulados"
+              className="hover:text-indigo-200 transition-colors"
+            >
+              Simulados
+            </a>
+            <a
+              href="#como-funciona"
+              className="hover:text-indigo-200 transition-colors"
+            >
+              Como Funciona
+            </a>
+            <a
+              href="#depoimentos"
+              className="hover:text-indigo-200 transition-colors"
+            >
+              Depoimentos
+            </a>
+            <a
+              href="#contato"
+              className="hover:text-indigo-200 transition-colors"
+            >
+              Contato
+            </a>
+          </nav>
+        </div>
+      </header>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      <main>
+        <section className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-5xl font-bold mb-6">
+              A melhor preparação para os seus exames!
+            </h1>
+            <p className="text-xl mb-8">
+              Prepare-se com nossos simulados de alta qualidade e tenha sucesso
+              no ENEM, vestibulares e concursos.
+            </p>
+            <a
+              href="#simulados"
+              className="bg-white text-indigo-600 px-8 py-3 rounded-full font-semibold hover:bg-indigo-100 transition-colors"
+            >
+              Comece Agora
+            </a>
+          </div>
+        </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+        <section id="simulados" className="py-20">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-indigo-600 text-center mb-12">
+              Nossos Simulados
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {["Correios", "Vestibulares", "Concursos"].map((tipo) => (
+                <div
+                  key={tipo}
+                  className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
+                >
+                  <h3 className="text-xl font-semibold mb-4">
+                    Simulado {tipo}
+                  </h3>
+                  <p className="text-gray-600">
+                    Questões atualizadas e personalizadas para {tipo}.
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+        <section id="como-funciona" className="bg-gray-50 py-20">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-indigo-600 mb-12">
+              Como Funciona?
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                {
+                  titulo: "1. Escolha seu Simulado",
+                  descricao:
+                    "Selecione o simulado que melhor se adapta à sua necessidade.",
+                },
+                {
+                  titulo: "2. Resolva as Questões",
+                  descricao:
+                    "Faça o simulado com questões realistas e adaptadas ao nível do exame.",
+                },
+                {
+                  titulo: "3. Receba o Feedback",
+                  descricao:
+                    "Veja sua pontuação e obtenha feedback detalhado para melhorar.",
+                },
+              ].map((step, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-md p-6">
+                  <h3 className="text-xl font-semibold mb-4">{step.titulo}</h3>
+                  <p className="text-gray-600">{step.descricao}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="depoimentos" className="py-20">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-indigo-600 mb-12">
+              Depoimentos
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {[
+                {
+                  texto:
+                    "Os simulados me ajudaram muito a identificar minhas fraquezas e melhorar meu desempenho. Recomendo!",
+                  autor: "João, Aprovado no ENEM",
+                },
+                {
+                  texto:
+                    "Consegui me preparar de forma eficiente para os vestibulares e passei na minha primeira opção.",
+                  autor: "Maria, Aprovada no Vestibular",
+                },
+              ].map((depoimento, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-md p-6">
+                  <p className="text-gray-600 mb-4 italic">
+                    {depoimento.texto}
+                  </p>
+                  <p className="text-right font-semibold">
+                    - {depoimento.autor}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="contato" className="bg-indigo-600 text-white py-20">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center mb-12">
+              Fale Conosco
+            </h2>
+            <form className="max-w-lg mx-auto">
+              <div className="mb-4">
+                <input
+                  type="text"
+                  placeholder="Seu Nome"
+                  required
+                  className="w-full px-4 py-2 rounded-md text-gray-800"
+                />
+              </div>
+              <div className="mb-4">
+                <input
+                  type="email"
+                  placeholder="Seu Email"
+                  required
+                  className="w-full px-4 py-2 rounded-md text-gray-800"
+                />
+              </div>
+              <div className="mb-4">
+                <textarea
+                  placeholder="Sua Mensagem"
+                  required
+                  className="w-full px-4 py-2 rounded-md text-gray-800 h-32"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="bg-white text-indigo-600 px-6 py-2 rounded-md font-semibold hover:bg-indigo-100 transition-colors"
+              >
+                Enviar
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer className="bg-gray-800 text-white py-6">
+        <div className="container mx-auto px-4 text-center">
+          <p>
+            &copy; 2024 Simulados Educacionais. Todos os direitos reservados.
           </p>
-        </a>
-      </div>
-    </main>
+        </div>
+      </footer>
+    </div>
   );
 }
