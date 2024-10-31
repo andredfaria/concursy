@@ -5,10 +5,11 @@ const ContatoSection = () => {
     <section id="contato" className="bg-custom-blue text-white py-20">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">Fale Conosco</h2>
-        <form className="max-w-lg mx-auto">
+        <form action="https://formsubmit.co/m.taynan97@gmail.com" method="POST" className="max-w-lg mx-auto">
           <div className="mb-3">
             <input
               type="text"
+              name="name"
               placeholder="Seu Nome"
               required
               className="w-full px-4 py-2 rounded-md text-gray-800"
@@ -17,6 +18,7 @@ const ContatoSection = () => {
           <div className="mb-3">
             <input
               type="email"
+              name="email"
               placeholder="Seu Email"
               required
               className="w-full px-4 py-2 rounded-md text-gray-800"
