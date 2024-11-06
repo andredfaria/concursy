@@ -12,6 +12,7 @@ const config: Config = {
         "custom-blue": "#37718A",
         "custom-black": "#040009",
         "custom-white": "#EFF6F8",
+        "cta": "#37718a", 
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
