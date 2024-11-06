@@ -90,20 +90,20 @@ const SimuladosSection = () => {
                     </div>
 
                     <div className="space-y-3">
-                      <a target="_blank"
-                        href={simulado.edital}
+                      <a
                         target="_blank"
+                        href={simulado.edital}
                         rel="noopener noreferrer"
                         className="block text-blue-600 hover:text-blue-800 font-medium transition-colors"
                       >
                         Acessar Edital →
                       </a>
 
-                      <a target="_blank"
-                        href={simulado.linkProduto}
+                      <a
                         target="_blank"
+                        href={simulado.linkProduto}
                         rel="noopener noreferrer"
-                        className="block w-full py-3 px-4 text-center font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors"
+                        className="block w-full py-3 px-4 text-center bg-gradient-to-r from-[#37718a] to-[#040009] px-6 py-3 rounded-full text-white font-semibold hover:from-[#4a8ca1] hover:to-[#262227] transition-all duration-300 transform hover:scale-105 shadow-lg"
                       >
                         Acessar Simulado
                       </a>
@@ -132,7 +132,7 @@ const SimuladosSection = () => {
                       <span>Data Prevista: {simulado.data}</span>
                     </div>
 
-                    <div className="block w-full py-3 px-4 text-center font-semibold text-white bg-blue-600 rounded-lg transition-colors inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-yellow-100 text-yellow-800">
+                    <div className="block w-full py-3 px-4 text-center bg-gradient-to-r from-[#37718a] to-[#040009] px-6 py-3 rounded-full text-white font-semibold hover:from-[#4a8ca1] hover:to-[#262227] transition-all duration-300 transform hover:scale-105 shadow-lg">
                       Em breve ...
                     </div>
                   </div>
