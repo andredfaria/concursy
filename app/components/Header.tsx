@@ -35,7 +35,7 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6">
           {menuItems.map((item) => (
-            <a target="_blank"
+            <a
               key={item.href}
               href={item.href}
               className="text-custom-white hover:text-indigo-200 transition-colors"
@@ -60,7 +60,7 @@ const Header = () => {
         <nav className="md:hidden absolute top-full left-0 right-0 bg-custom-blue shadow-lg">
           <div className="flex flex-col py-2">
             {menuItems.map((item) => (
-              <a target="_blank"
+              <a
                 key={item.href}
                 href={item.href}
                 className="text-custom-white hover:text-indigo-200 transition-colors px-4 py-2"
