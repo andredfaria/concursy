@@ -22,7 +22,7 @@ const ComoFuncionaSection = () => {
       titulo: "Avalie seu desempenho",
       emoji: "📊",
       descricao:
-        "Entenda seu desempenho com uma análise minuciosa e feedback para cada resposta.",
+        "Aprenda com cada questão: receba explicações para acertos e erros.",
       imagem:
         "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTy5zpTmcD8WVhsUExTzapDVStYLpyRTJ-RGbcLyg3BUn7tkYOF",
       cor: "from-green-500 to-green-600",
