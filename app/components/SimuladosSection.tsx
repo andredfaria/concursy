@@ -3,16 +3,6 @@ import React from "react";
 const SimuladosSection = () => {
   const simulados = [
     {
-      tipo: "Correios",
-      imagem:
-        "https://t.ctcdn.com.br/2TjKlA-QOVFecC2P3WkRp07hmWM=/640x360/smart/i535351.jpeg",
-      edital: "https://prosel.correios.com.br/concursos/detalharconcurso/1211",
-      linkProduto:
-        "https://hotmart.com/pt-br/marketplace/produtos/https-hotmart-com-product-simulado-completo-agente-de-correios-carteiro-q96139065p/Q96139065P",
-      data: "15/12/2024",
-      disponivel: true,
-    },
-    {
       tipo: "MPU",
       imagem:
         "https://impconcursos.com.br/cdn/shop/articles/MPU_ab75baa4-fe2d-43ba-a052-f273085bc700.png?v=1725385412",
