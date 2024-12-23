@@ -13,7 +13,7 @@ Este projeto é uma landing page da empresa Concursy, desenvolvido com Next.js e
 - [Tailwind CSS](https://tailwindcss.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 
-## 🚀 Começando
+## 🪟 Começando
 
 Para iniciar o servidor de desenvolvimento, execute um dos seguintes comandos:
 
