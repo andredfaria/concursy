@@ -14,8 +14,7 @@ const DepoimentosSection = () => {
       texto:
         "Consegui me preparar de forma eficiente para meu concurso e passei de primeira!",
       autor: "André Carvalho",
-      imagem:
-        "https://media.licdn.com/dms/image/v2/D4D03AQFIfVI1G7sv5g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1723635498260?e=1735776000&v=beta&t=MIcYYSIGMo0HUKggjb5jUIjY-TfsuoxnaNJ_fP-2dqs",
+      imagem: "https://thispersondoesnotexist.com/",
       nota: 5,
     },
   ];

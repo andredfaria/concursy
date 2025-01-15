@@ -12,10 +12,10 @@ const Header = () => {
   };
 
   const menuItems = [
-    { href: "#simulados", text: "Simulados" },
-    { href: "#como-funciona", text: "Como Funciona" },
-    { href: "#depoimentos", text: "Depoimentos" },
-    { href: "#contato", text: "Contato" },
+    // { href: "https://www.instagram.com/concursy2024/", text: "Instagram" },
+    // { href: "#como-funciona", text: "Como Funciona" },
+    // { href: "#depoimentos", text: "Depoimentos" },
+    // { href: "#contato", text: "Contato" },
   ];
 
   return (

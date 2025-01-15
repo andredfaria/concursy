@@ -48,7 +48,7 @@ export default function Home() {
       <MainSection />
       <SimuladosSection />
       <ComoFuncionaSection />
-      <DepoimentosSection />
+      {/* <DepoimentosSection /> */}
       <ContatoSection />
       <Footer />
     </div>

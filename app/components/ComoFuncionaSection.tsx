@@ -84,7 +84,7 @@ const ComoFuncionaSection = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <div className="inline-flex flex-col sm:flex-row gap-4 items-center justify-center">
             <a
               target="_blank"
@@ -101,7 +101,7 @@ const ComoFuncionaSection = () => {
               Saiba Mais
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -3,22 +3,21 @@ import React from "react";
 const SimuladosSection = () => {
   const simulados = [
     {
+      tipo: "ICMBIO",
+      imagem:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvNRFPMED-zVH8DoizEC_HruF3wD23IrJmHA&s",
+      edital: "https://www.cebraspe.org.br/concursos/icmbio_24",
+      linkProduto: "https://www.cebraspe.org.br/concursos/icmbio_24",
+      data: "Inscrições de 17/01/2025 até 27/01/2025",
+      disponivel: false,
+    },
+    {
       tipo: "MPU",
       imagem:
         "https://impconcursos.com.br/cdn/shop/articles/MPU_ab75baa4-fe2d-43ba-a052-f273085bc700.png?v=1725385412",
       edital:
         "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos",
       linkProduto: "https://www.gov.br/mpu/",
-      data: "-",
-      disponivel: false,
-    },
-    {
-      tipo: "IBAMA",
-      imagem:
-        "https://clickpetroleoegas.com.br/wp-content/uploads/2023/12/novo-concurso-do-ibama-edital-sera-divulgado-entre-abril-ou-maio-e-pode-ofertar-cerca-de-2-400-vagas.jpg.webp",
-      edital:
-        "https://www.tecconcursos.com.br/blog/noticias/concurso-ibama-2024/",
-      linkProduto: "https://www.ibama.gov.br/",
       data: "-",
       disponivel: false,
     },

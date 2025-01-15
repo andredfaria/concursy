@@ -1,18 +1,7 @@
-// app/components/Header.tsx
-import Image from "next/image"; // Importar o componente Image do Next.js
-import logoGif from "../assets/logo.gif";
-
 const SimuladosSection = () => {
   return (
     <section className="bg-gradient-to-r from-custom-blue to-cyan-800 text-white py-10">
       <div className="container mx-auto px-4 text-center">
-        {/* Se você quiser exibir a imagem em telas maiores, pode descomentar a linha abaixo */}
-        {/* <Image
-          src={logoGif}
-          alt="Concursy"
-          className="mx-auto"
-          layout="responsive"
-        /> */}
         <h1 className="text-4xl md:text-5xl text-custom-white mb-4 sm:mb-6">
           O melhor simulado para seu concurso!
         </h1>
@@ -21,12 +10,6 @@ const SimuladosSection = () => {
           cada resposta!
         </p>
         <div className="flex justify-center flex-wrap gap-4">
-          {/* <a target="_blank"
-            href="#simulados"
-            className="bg-white px-6 py-3 rounded-full font-semibold hover:bg-indigo-100 transition-colors text-center w-full sm:w-auto"
-          >
-            Compre agora
-          </a> */}
           <a target="_blank"
             href="https://www.instagram.com/concursy2024/"
             className="bg-gradient-to-r from-[#37718a] to-[#040009] text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:from-[#4a839b] hover:to-[#1a0c12] transition-all duration-300 transform hover:scale-105"
