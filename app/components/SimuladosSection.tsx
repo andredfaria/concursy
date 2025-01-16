@@ -7,9 +7,10 @@ const SimuladosSection = () => {
       imagem:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvNRFPMED-zVH8DoizEC_HruF3wD23IrJmHA&s",
       edital: "https://www.cebraspe.org.br/concursos/icmbio_24",
-      linkProduto: "https://www.cebraspe.org.br/concursos/icmbio_24",
-      data: "Inscrições de 17/01/2025 até 27/01/2025",
-      disponivel: false,
+      linkProduto:
+        "https://concursy2024.hotmart.host/simulados-icmbio-2025-29795ad9-4a2b-4b68-93d9-65ec41b66861",
+      data: "Inscrições de 17/01/2025 - 27/01/2025",
+      disponivel: true,
     },
     {
       tipo: "MPU",
@@ -58,7 +59,7 @@ const SimuladosSection = () => {
                 {simulado.disponivel ? (
                   <div className="space-y-4">
                     <p className="text-gray-600">
-                      Questões atualizadas e personalizadas para {simulado.tipo}
+                      3 Simulado {simulado.tipo} com correções
                     </p>
 
                     <div className="flex items-center gap-2 text-gray-700">
@@ -94,14 +95,14 @@ const SimuladosSection = () => {
                         rel="noopener noreferrer"
                         className="block w-full py-3 px-4 text-center bg-gradient-to-r from-[#37718a] to-[#040009] px-6 py-3 rounded-full text-white font-semibold hover:from-[#4a8ca1] hover:to-[#262227] transition-all duration-300 transform hover:scale-105 shadow-lg"
                       >
-                        Acessar Simulado
+                        Garanta já
                       </a>
                     </div>
                   </div>
                 ) : (
                   <div className="space-y-4">
                     <p className="text-gray-600">
-                      Questões atualizadas e personalizadas para {simulado.tipo}
+                      Simulado {simulado.tipo} com questões atualizadas
                     </p>
 
                     <div className="flex items-center gap-2 pb-10 text-gray-700">
