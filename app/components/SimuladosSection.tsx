@@ -22,6 +22,15 @@ const SimuladosSection = () => {
       data: "-",
       disponivel: false,
     },
+    {
+      tipo: "CPA-20",
+      imagem:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi1-S2J56z2lR2V937rpnjaXDimFsq10BuNp7aP02n3L9LKAMx0u1C1VeKp2uSKeeCCwE&usqp=CAU",
+      edital: "https://www.anbima.com.br/pt_br/educar/certificacoes/cpa-20.htm",
+      linkProduto: "https://www.gov.br/mpu/",
+      data: "-",
+      disponivel: false,
+    },
   ];
 
   return (
