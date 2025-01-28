@@ -12,13 +12,29 @@ const poppins = Poppins({
 export const metadata = {
   title: "Concursy - Prepare-se para o Sucesso",
   description: "A melhor preparação para os seus exames!",
+  openGraph: {
+    title: "Concursy - Prepare-se para o Sucesso",
+    description: "A melhor preparação para os seus exames!",
+    url: "https://www.concursy.com.br",
+    siteName: "Concursy",
+    images: [
+      {
+        url: "https://www.concursy.com.br/assets/logo_background.png",
+        width: 1200,
+        height: 630,
+        alt: "Concursy - Prepare-se para o Sucesso",
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-  }) {
+}) {
   return (
     <html lang="pt-br">
       <head>
@@ -41,6 +57,23 @@ export default function RootLayout({
             `,
           }}
         />
+        {/* Meta tags Open Graph */}
+        <meta
+          property="og:title"
+          content="Concursy - Prepare-se para o Sucesso"
+        />
+        <meta
+          property="og:description"
+          content="A melhor preparação para os seus exames!"
+        />
+        <meta property="og:url" content="https://www.concursy.com.br" />
+        <meta
+          property="og:image"
+          content="https://www.concursy.com.br/assets/logo_background.png"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Concursy" />
+        <meta property="og:locale" content="pt_BR" />
       </head>
       <body className={poppins.className}>{children}</body>
     </html>
