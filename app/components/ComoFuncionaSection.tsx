@@ -19,7 +19,7 @@ const ComoFuncionaSection = () => {
       cor: "from-purple-500 to-purple-600",
     },
     {
-      titulo: "Avalie seu desempenho",
+      titulo: "Seu Desempenho",
       emoji: "📊",
       descricao:
         "Aprenda com cada questão: receba explicações para acertos e erros.",

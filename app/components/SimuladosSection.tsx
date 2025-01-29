@@ -111,7 +111,7 @@ const SimuladosSection = () => {
                 ) : (
                   <div className="space-y-4">
                     <p className="text-gray-600">
-                      Simulado {simulado.tipo} com questões atualizadas
+                      Simulado {simulado.tipo} 
                     </p>
 
                     <div className="flex items-center gap-2 pb-10 text-gray-700">
