@@ -10,11 +10,13 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Concursy - Prepare-se para o Sucesso",
-  description: "A melhor preparação para os seus exames!",
+  title: "Concursy - Sua Melhor Preparação para Concursos Públicos",
+  description:
+    "Prepare-se para concursos públicos com simulados e materiais completos. A melhor plataforma para estudar e garantir sua aprovação!",
   openGraph: {
-    title: "Concursy - Prepare-se para o Sucesso",
-    description: "A melhor preparação para os seus exames!",
+    title: "Concursy - Sua Melhor Preparação para Concursos Públicos",
+    description:
+      "Simulados, provas anteriores e conteúdos exclusivos para concursos públicos. Estude com eficiência e conquiste sua vaga!",
     url: "https://www.concursy.com.br",
     siteName: "Concursy",
     images: [
@@ -22,7 +24,7 @@ export const metadata = {
         url: "https://www.concursy.com.br/assets/logo_background.png",
         width: 1200,
         height: 630,
-        alt: "Concursy - Prepare-se para o Sucesso",
+        alt: "Concursy - Simulados e Materiais para Concursos Públicos",
       },
     ],
     locale: "pt_BR",
