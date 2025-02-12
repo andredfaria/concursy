@@ -13,12 +13,12 @@ const SimuladosSection = () => {
       disponivel: true,
     },
     {
-      tipo: "MPU",
+      tipo: "PRF",
       imagem:
-        "https://impconcursos.com.br/cdn/shop/articles/MPU_ab75baa4-fe2d-43ba-a052-f273085bc700.png?v=1725385412",
+        "https://www.gov.br/prf/pt-br/noticias/estaduais/piaui/anteriores/2021/Janeiro%202021/prf-pi-divulga-relatorio-de-acoes-de-comunicacao-durante-o-ano-de-2020/whatsapp-image-2020-03-18-at-15-15-23-e1584555385800.jpeg/@@images/2e5d305a-e31f-4b8e-833a-ce391c92c455.jpeg",
       edital:
-        "https://www.gov.br/pf/pt-br/acesso-a-informacao/servidores/concursos",
-      linkProduto: "https://www.gov.br/mpu/",
+        "https://concursosnobrasil.com/concursos/br/2025/01/16/concurso-prf-2025/",
+      linkProduto: "https://www.gov.br/prf/pt-br",
       data: "-",
       disponivel: false,
     },
@@ -38,11 +38,11 @@ const SimuladosSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
-            Nossos Simulados
+            Nossos simulados
             <span className="ml-2 inline-block animate-bounce">📝</span>
           </h2>
           <p className="mt-4 text-xl text-gray-600">
-            Prepare-se com questões focadas no seu concurso.
+            Seu futuro começa com um simulado.
           </p>
         </div>
 
@@ -110,9 +110,7 @@ const SimuladosSection = () => {
                   </div>
                 ) : (
                   <div className="space-y-4">
-                    <p className="text-gray-600">
-                      Simulado {simulado.tipo} 
-                    </p>
+                    <p className="text-gray-600">Simulado {simulado.tipo}</p>
 
                     <div className="flex items-center gap-2 pb-10 text-gray-700">
                       <svg

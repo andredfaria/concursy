@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Head>
-        <title>Concursy - Prepare-se para o Sucesso</title>
+        <title>Concursy - Prepare-se para o sucesso</title>
         <meta
           name="description"
           content="Simulados para vestibulares, concursos e ENEM. A melhor preparação para os seus exames."

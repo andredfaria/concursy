@@ -3,28 +3,29 @@ import React from "react";
 const ComoFuncionaSection = () => {
   const steps = [
     {
-      titulo: "Escolha seu simulado",
+      titulo: "Pratique",
       emoji: "🎯",
-      descricao: "Escolha o simulado específico para o seu concurso.",
+      descricao:
+        "Escolha o simulado ideal para o seu concurso e comece sua jornada.",
       imagem:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNRlKD7BqB-zU9h6E0GYZp4m-4tV1177-N2w&s",
+        "https://www.estudaqui.com/wp-content/uploads/2017/04/T%C3%A9cnica-para-resolver-quest%C3%B5es-de-concurso-Capa.jpg",
       cor: "from-blue-500 to-blue-600",
     },
     {
-      titulo: "Resolva as questões",
+      titulo: "Aprenda",
       emoji: "📝",
-      descricao: "Simule o ambiente da prova com questões reais.",
+      descricao: "Simule a prova com questões reais e ganhe experiência.",
       imagem:
-        "https://www.estudaqui.com/wp-content/uploads/2017/04/T%C3%A9cnica-para-resolver-quest%C3%B5es-de-concurso-Capa.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS40pTLyZboOryXJkZTnnsFh4k2aAf479C6rmFx2C3uHlIkDcQEvf1DQL81uoYdKK2PelY&usqp=CAU",
       cor: "from-purple-500 to-purple-600",
     },
     {
-      titulo: "Seu Desempenho",
-      emoji: "📊",
+      titulo: "Passe",
+      emoji: "🚀",
       descricao:
-        "Aprenda com cada questão: receba explicações para acertos e erros.",
+        "A aprovação está ao seu alcance! Dedicação e esforço fazem a diferença!",
       imagem:
-        "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTy5zpTmcD8WVhsUExTzapDVStYLpyRTJ-RGbcLyg3BUn7tkYOF",
+        "https://estudareaprender.com/wp-content/uploads/passar-em-provas.jpg",
       cor: "from-green-500 to-green-600",
     },
   ];
@@ -33,9 +34,9 @@ const ComoFuncionaSection = () => {
     <div className="bg-gradient-to-b from-gray-50 to-gray-100 py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="inline-block animate-bounce text-4xl mb-4">🚀</span>
           <h2 className="text-4xl font-extrabold text-gray-900 sm:text-5xl">
-            Como Funciona?
+            Sua jornada
+            <span className="ml-2 inline-block animate-bounce">🛣️</span>
           </h2>
           <p className="mt-4 text-xl text-gray-600">
             Entenda como nosso simulado funciona e prepare-se de forma
@@ -95,7 +96,7 @@ const ComoFuncionaSection = () => {
             </a>
             <a
               target="_blank"
-              href="https://www.instagram.com/concursy2024/"
+              href="https://www.instagram.com/concursy_/"
               className="bg-white border-2 px-6 py-3 rounded-full text-[#37718a] font-semibold shadow-md hover:border-[#37718a] hover:text-[#040009] hover:bg-[#effeff] transition-all duration-300"
             >
               Saiba Mais

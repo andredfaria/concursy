@@ -11,7 +11,7 @@ const SimuladosSection = () => {
         </p>
         <div className="flex justify-center flex-wrap gap-4">
           <a target="_blank"
-            href="https://www.instagram.com/concursy2024/"
+            href="https://www.instagram.com/concursy_/"
             className="bg-gradient-to-r from-[#37718a] to-[#040009] text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:from-[#4a839b] hover:to-[#1a0c12] transition-all duration-300 transform hover:scale-105"
           >
             Conheça mais sobre nós

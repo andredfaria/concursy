@@ -62,7 +62,7 @@ export default function RootLayout({
         {/* Meta tags Open Graph */}
         <meta
           property="og:title"
-          content="Concursy - Prepare-se para o Sucesso"
+          content="Concursy - Prepare-se para o sucesso"
         />
         <meta
           property="og:description"

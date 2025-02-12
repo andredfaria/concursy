@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex justify-center space-x-6">
           <a
             target="_blank"
-            href="https://www.instagram.com/concursy2024/"
+            href="https://www.instagram.com/concursy_/"
             className="text-gray-400 hover:text-white transition-colors"
           >
             <span className="sr-only">Instagram</span>
