@@ -32,9 +32,10 @@ export default function BlogPost({ post }: { post: Post }) {
               <span>{post.readingTime} min de leitura</span>
             </div>
 
-            <div className="prose prose-lg max-w-none">
-              {post.content}
-            </div>
+            <div 
+              className="prose prose-lg max-w-none"
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />
           </div>
         </div>
       </div>
