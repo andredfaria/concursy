@@ -41,7 +41,7 @@ export default function RootLayout({
     <html lang="pt-br">
       <head>
         {/* Google Analytics Tag */}
-                <Script
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-11519677004"
           strategy="afterInteractive"
         />
@@ -57,7 +57,24 @@ export default function RootLayout({
             `,
           }}
         />
-        {/* Script para carregar o Pixel do Facebook */}
+        {/* Google Tag Ads (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16948824563"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-tag"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-16948824563');
+            `,
+          }}
+        />
+        {/* Facebook Pixel */}
         <Script
           id="facebook-pixel"
           strategy="afterInteractive"
