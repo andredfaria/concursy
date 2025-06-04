@@ -199,7 +199,7 @@ const PRF2025Page = () => {
               className="bg-gradient-to-r from-[#37718a] to-[#040009] text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:from-[#4a839b] hover:to-[#1a0c12] transition-all duration-300 transform hover:scale-105 text-xl"
               onClick={() => {
                 window.location.href =
-                  "https://pay.hotmart.com/C97561489Q?off=6hkzn5zc";
+                  "https://pay.hotmart.com/J98854347N";
               }}
             >
               QUERO GARANTIR MINHA VAGA POR R$ 59,99
@@ -351,7 +351,7 @@ const PRF2025Page = () => {
                     className="w-full bg-gradient-to-r from-[#37718a] to-[#040009] text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:from-[#4a839b] hover:to-[#1a0c12] transition-all duration-300 transform hover:scale-105"
                     onClick={() => {
                       window.location.href =
-                        "https://pay.hotmart.com/C97561489Q?off=6hkzn5zc";
+                        "https://pay.hotmart.com/J98854347N";
                     }}
                   >
                     COMPRAR AGORA
@@ -450,7 +450,7 @@ const PRF2025Page = () => {
               className="bg-gradient-to-r from-[#37718a] to-[#040009] text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:from-[#4a839b] hover:to-[#1a0c12] transition-all duration-300 transform hover:scale-105 text-xl"
               onClick={() => {
                 window.location.href =
-                  "https://pay.hotmart.com/C97561489Q?off=6hkzn5zc";
+                  "https://pay.hotmart.com/J98854347N";
               }}
             >
               QUERO MINHA APROVAÇÃO

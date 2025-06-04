@@ -8,7 +8,7 @@ const SimuladosSection = () => {
         "https://www.gov.br/prf/pt-br/noticias/estaduais/piaui/anteriores/2021/Janeiro%202021/prf-pi-divulga-relatorio-de-acoes-de-comunicacao-durante-o-ano-de-2020/whatsapp-image-2020-03-18-at-15-15-23-e1584555385800.jpeg/@@images/2e5d305a-e31f-4b8e-833a-ce391c92c455.jpeg",
       edital:
         "https://concursosnobrasil.com/concursos/br/2025/01/16/concurso-prf-2025/",
-      linkProduto: "https://pay.hotmart.com/C97561489Q?off=6hkzn5zc",
+      linkProduto: "https://pay.hotmart.com/J98854347N",
       data: "27 de julho",
       disponivel: true,
     },
