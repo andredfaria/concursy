@@ -2,17 +2,17 @@
 
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
-import { 
-  Clock, 
-  CheckCircle, 
-  Star, 
-  FileText, 
-  Target, 
-  TrendingUp, 
-  Shield, 
-  Award, 
+import {
+  Clock,
+  CheckCircle,
+  Star,
+  FileText,
+  Target,
+  TrendingUp,
+  Shield,
+  Award,
   Users,
-  ChevronDown 
+  ChevronDown,
 } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -42,7 +42,9 @@ const PRF2025Page = () => {
       if (distance > 0) {
         setTimeLeft({
           days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          hours: Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          ),
           minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
           seconds: Math.floor((distance % (1000 * 60)) / 1000),
         });
@@ -55,70 +57,81 @@ const PRF2025Page = () => {
   }, []);
 
   const toggleFaq = (index: number) => {
-    setFaqOpen(prev => ({ ...prev, [index]: !prev[index] }));
+    setFaqOpen((prev) => ({ ...prev, [index]: !prev[index] }));
   };
 
   const benefits = [
     {
       icon: <FileText className="w-8 h-8 text-custom-blue" />,
       title: "100 Questões por Simulado",
-      description: "Questões cuidadosamente elaboradas seguindo o padrão da prova oficial"
+      description:
+        "Questões cuidadosamente elaboradas seguindo o padrão da prova oficial",
     },
     {
       icon: <Target className="w-8 h-8 text-custom-blue" />,
       title: "Comentários Detalhados",
-      description: "Cada questão possui explicação completa para maximizar seu aprendizado"
+      description:
+        "Cada questão possui explicação completa para maximizar seu aprendizado",
     },
     {
       icon: <TrendingUp className="w-8 h-8 text-custom-blue" />,
       title: "Identifique Pontos Fracos",
-      description: "Relatórios detalhados para focar nos assuntos que precisam de mais atenção"
+      description:
+        "Relatórios detalhados para focar nos assuntos que precisam de mais atenção",
     },
     {
       icon: <Award className="w-8 h-8 text-custom-blue" />,
       title: "Estilo Oficial da Prova",
-      description: "Simulados que reproduzem fielmente o formato e dificuldade do concurso real"
-    }
+      description:
+        "Simulados que reproduzem fielmente o formato e dificuldade do concurso real",
+    },
   ];
 
   const testimonials = [
     {
       name: "Maria Silva",
       role: "Aprovada PRF 2024",
-      comment: "Os simulados foram fundamentais para minha aprovação. O formato idêntico à prova real me deixou muito mais confiante no dia do exame.",
-      rating: 5
+      comment:
+        "Os simulados foram fundamentais para minha aprovação. O formato idêntico à prova real me deixou muito mais confiante no dia do exame.",
+      rating: 5,
     },
     {
       name: "João Santos",
       role: "Aprovado PRF 2024",
-      comment: "Excelente qualidade das questões e comentários muito didáticos. Recomendo para quem quer uma preparação séria.",
-      rating: 5
+      comment:
+        "Excelente qualidade das questões e comentários muito didáticos. Recomendo para quem quer uma preparação séria.",
+      rating: 5,
     },
     {
       name: "Ana Costa",
       role: "Aprovada PRF 2024",
-      comment: "Material completo e bem estruturado. Me ajudou a identificar exatamente onde precisava melhorar.",
-      rating: 5
-    }
+      comment:
+        "Material completo e bem estruturado. Me ajudou a identificar exatamente onde precisava melhorar.",
+      rating: 5,
+    },
   ];
 
   const faqs = [
     {
       question: "Quantos simulados estão inclusos?",
-      answer: "Você terá acesso a múltiplos simulados completos, cada um com 100 questões comentadas, garantindo uma preparação abrangente."
+      answer:
+        "Você terá acesso a múltiplos simulados completos, cada um com 100 questões comentadas, garantindo uma preparação abrangente.",
     },
     {
       question: "As questões seguem o padrão da prova oficial?",
-      answer: "Sim! Todas as questões são elaboradas seguindo rigorosamente o estilo, formato e nível de dificuldade da prova oficial da PRF."
+      answer:
+        "Sim! Todas as questões são elaboradas seguindo rigorosamente o estilo, formato e nível de dificuldade da prova oficial da PRF.",
     },
     {
       question: "Por quanto tempo terei acesso?",
-      answer: "Seu acesso é vitalício! Você pode estudar no seu ritmo sem pressa e revisitar o material quando quiser."
+      answer:
+        "Seu acesso é vitalício! Você pode estudar no seu ritmo sem pressa e revisitar o material quando quiser.",
     },
     {
       question: "Há garantia de satisfação?",
-      answer: "Sim! Oferecemos 7 dias de garantia incondicional. Se não ficar satisfeito, devolvemos seu dinheiro."
-    }
+      answer:
+        "Sim! Oferecemos 7 dias de garantia incondicional. Se não ficar satisfeito, devolvemos seu dinheiro.",
+    },
   ];
 
   return (
@@ -130,6 +143,19 @@ const PRF2025Page = () => {
           content="Os simulados mais completos para o concurso da Polícia Rodoviária Federal 2025. Centenas de questões comentadas no formato oficial da prova."
         />
         <link rel="icon" href="/favicon.ico" />
+
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16948824563"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-16948824563');
+            `,
+          }}
+        />
       </Head>
 
       <Header />
@@ -198,8 +224,7 @@ const PRF2025Page = () => {
             <button
               className="bg-gradient-to-r from-[#37718a] to-[#040009] text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:from-[#4a839b] hover:to-[#1a0c12] transition-all duration-300 transform hover:scale-105 text-xl"
               onClick={() => {
-                window.location.href =
-                  "https://pay.hotmart.com/J98854347N";
+                window.location.href = "https://pay.hotmart.com/J98854347N";
               }}
             >
               QUERO GARANTIR MINHA VAGA POR R$ 59,99
@@ -449,8 +474,7 @@ const PRF2025Page = () => {
             <button
               className="bg-gradient-to-r from-[#37718a] to-[#040009] text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:from-[#4a839b] hover:to-[#1a0c12] transition-all duration-300 transform hover:scale-105 text-xl"
               onClick={() => {
-                window.location.href =
-                  "https://pay.hotmart.com/J98854347N";
+                window.location.href = "https://pay.hotmart.com/J98854347N";
               }}
             >
               QUERO MINHA APROVAÇÃO
@@ -469,4 +493,4 @@ const PRF2025Page = () => {
   );
 };
 
-export default PRF2025Page; 
+export default PRF2025Page;
