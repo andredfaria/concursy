@@ -23,13 +23,14 @@ const SimuladosSection = () => {
       disponivel: true,
     },
     {
-      tipo: "CPA-20",
+      tipo: "IBGE - Agente de Recenseamento",
       imagem:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi1-S2J56z2lR2V937rpnjaXDimFsq10BuNp7aP02n3L9LKAMx0u1C1VeKp2uSKeeCCwE&usqp=CAU",
-      edital: "https://www.anbima.com.br/pt_br/educar/certificacoes/cpa-20.htm",
-      linkProduto: "https://www.gov.br/mpu/",
-      data: "-",
-      disponivel: false,
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlZNMkdNsF1b2nMFcPRHGWunutDzLGjK-9eg&s",
+      edital: "https://www.ibge.gov.br/",
+      linkProduto: "https://go.hotmart.com/Y102890841T",
+      data: "22 de fevereiro de 2026",
+      disponivel: true,
+      descricao: "3 simulados inéditos IBGE Agente, com 60 questões cada e gabaritos comentados. Ideal para revisar e testar seus conhecimentos.",
     },
   ];
 
@@ -68,7 +69,7 @@ const SimuladosSection = () => {
                 {simulado.disponivel ? (
                   <div className="space-y-4">
                     <p className="text-gray-600">
-                      3 Simulado {simulado.tipo} com correções
+                      {simulado.descricao || `3 Simulado ${simulado.tipo} com correções`}
                     </p>
 
                     <div className="flex items-center gap-2 text-gray-700">

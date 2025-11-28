@@ -25,7 +25,7 @@ const ComoFuncionaSection = () => {
       descricao:
         "A aprovação está ao seu alcance! Dedicação e esforço fazem a diferença!",
       imagem:
-        "https://estudareaprender.com/wp-content/uploads/passar-em-provas.jpg",
+        "https://ichef.bbci.co.uk/ace/ws/640/cpsprodpb/8BEA/production/_108381853_provapa.jpg.webp",
       cor: "from-green-500 to-green-600",
     },
   ];
