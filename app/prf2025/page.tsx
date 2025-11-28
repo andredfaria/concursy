@@ -352,10 +352,6 @@ const PRF2025Page = () => {
                       <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
                       <span>Acesso vitalício ao material</span>
                     </div>
-                    <div className="flex items-start space-x-3">
-                      <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
-                      <span>Suporte técnico especializado</span>
-                    </div>
                   </div>
                 </div>
 

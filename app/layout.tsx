@@ -1,6 +1,7 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+import { Providers } from "./components/providers";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -111,7 +112,9 @@ export default function RootLayout({
         <meta property="og:site_name" content="Concursy" />
         <meta property="og:locale" content="pt_BR" />
       </head>
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
