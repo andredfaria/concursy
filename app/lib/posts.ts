@@ -11,7 +11,7 @@ export type Post = {
 type ApiPost = {
   title: string;
   url: string;
-  published_date: string;
+  published_date: string | null;
   score: string;
   content: string;
   raw_content: string;
@@ -40,13 +40,24 @@ function generateSlugFromTitle(title: string): string {
 
 /**
  * Formata a data ISO para formato YYYY-MM-DD
+ * Aceita string ou null, retorna string vazia se não conseguir formatar
  */
-function formatDate(isoDate: string): string {
+function formatDate(isoDate: string | null | undefined): string {
+  if (!isoDate) {
+    return "";
+  }
   try {
     const date = new Date(isoDate);
+    if (isNaN(date.getTime())) {
+      return "";
+    }
     return date.toISOString().split("T")[0];
   } catch {
-    return isoDate.split("T")[0];
+    try {
+      return isoDate.split("T")[0];
+    } catch {
+      return "";
+    }
   }
 }
 
@@ -76,7 +87,9 @@ function generateExcerpt(text: string, maxLength: number = 200): string {
  */
 function mapApiPostToPost(apiPost: ApiPost): Post {
   const slug = generateSlugFromTitle(apiPost.title);
-  const date = formatDate(apiPost.published_date);
+  // Usa published_date se disponível, caso contrário usa createdAt como fallback
+  const dateString = apiPost.published_date || apiPost.createdAt;
+  const date = formatDate(dateString);
   const excerpt = generateExcerpt(apiPost.content);
   const readingTime = calculateReadingTime(apiPost.raw_content);
 
@@ -94,24 +107,109 @@ function mapApiPostToPost(apiPost: ApiPost): Post {
 export async function getAllPosts(): Promise<Post[]> {
   try {
     const response = await fetch(BLOG_API_URL, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+      },
       next: { revalidate: 3600 }, // Cache por 1 hora
+      // Timeout implícito do Next.js (padrão é 30s para fetch)
     });
 
+    // Verifica se a resposta está OK
     if (!response.ok) {
-      console.error(`Erro ao buscar posts: ${response.status}`);
+      const statusText = response.statusText || "Erro desconhecido";
+      console.error(
+        `Erro ao buscar posts: ${response.status} ${statusText}`,
+        `URL: ${BLOG_API_URL}`
+      );
       return [];
     }
 
-    const apiPosts: ApiPost[] = await response.json();
+    // Verifica se o Content-Type é JSON
+    const contentType = response.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+      console.error(
+        `Resposta da API não é JSON. Content-Type: ${contentType}`,
+        `URL: ${BLOG_API_URL}`
+      );
+      return [];
+    }
 
+    // Faz o parse do JSON
+    let apiPosts: ApiPost[];
+    try {
+      apiPosts = await response.json();
+    } catch (jsonError) {
+      console.error(
+        "Erro ao fazer parse do JSON da resposta:",
+        jsonError instanceof Error ? jsonError.message : jsonError
+      );
+      return [];
+    }
+
+    // Valida se a resposta é um array
     if (!Array.isArray(apiPosts)) {
-      console.error("Resposta da API não é um array");
+      console.error(
+        `Resposta da API não é um array. Tipo recebido: ${typeof apiPosts}`,
+        `URL: ${BLOG_API_URL}`
+      );
       return [];
     }
 
-    return apiPosts.map(mapApiPostToPost);
+    // Mapeia e filtra posts inválidos
+    const posts = apiPosts
+      .map((apiPost, index) => {
+        try {
+          // Valida campos obrigatórios
+          // published_date pode ser null, nesse caso usamos createdAt como fallback
+          if (
+            !apiPost.title ||
+            !apiPost.content ||
+            !apiPost.raw_content ||
+            (!apiPost.published_date && !apiPost.createdAt)
+          ) {
+            console.warn(
+              `Post no índice ${index} está incompleto. Campos obrigatórios ausentes.`,
+              {
+                hasTitle: !!apiPost.title,
+                hasPublishedDate: !!apiPost.published_date,
+                hasCreatedAt: !!apiPost.createdAt,
+                hasContent: !!apiPost.content,
+                hasRawContent: !!apiPost.raw_content,
+              }
+            );
+            return null;
+          }
+          return mapApiPostToPost(apiPost);
+        } catch (error) {
+          console.error(
+            `Erro ao mapear post no índice ${index}:`,
+            error instanceof Error ? error.message : error
+          );
+          return null;
+        }
+      })
+      .filter((post): post is Post => post !== null);
+
+    return posts;
   } catch (error) {
-    console.error("Erro ao buscar posts do endpoint:", error);
+    // Trata diferentes tipos de erro
+    if (error instanceof TypeError && error.message.includes("fetch")) {
+      console.error(
+        "Erro de rede ao buscar posts:",
+        error.message,
+        `URL: ${BLOG_API_URL}`
+      );
+    } else if (error instanceof Error) {
+      console.error(
+        "Erro ao buscar posts do endpoint:",
+        error.message,
+        `Stack: ${error.stack}`
+      );
+    } else {
+      console.error("Erro desconhecido ao buscar posts:", error);
+    }
     return [];
   }
 }
