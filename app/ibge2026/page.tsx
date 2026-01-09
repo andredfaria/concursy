@@ -28,12 +28,8 @@ const IBGE2026Page = () => {
   const [faqOpen, setFaqOpen] = useState<Record<number, boolean>>({});
 
   useEffect(() => {
-    // Gerar uma data aleatória entre 1 e 3 dias
-    const randomDays = Math.floor(Math.random() * 3) + 1;
-    const randomHours = Math.floor(Math.random() * 24);
-    const targetDate = new Date();
-    targetDate.setDate(targetDate.getDate() + randomDays);
-    targetDate.setHours(targetDate.getHours() + randomHours);
+    // Data da prova: 1 de março de 2026
+    const targetDate = new Date('2026-03-01T00:00:00');
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -251,7 +247,7 @@ const IBGE2026Page = () => {
                 window.location.href = "https://pay.hotmart.com/Y102890841T";
               }}
             >
-              QUERO GARANTIR MINHA VAGA POR R$ 12,00
+              QUERO GARANTIR MINHA VAGA POR R$ 59,00
             </button>
           </div>
 
@@ -395,7 +391,7 @@ const IBGE2026Page = () => {
                   </p>
 
                   <div className="p-2 mb-4">
-                    <div className="text-3xl font-bold mb-2">R$ 12,00</div>
+                    <div className="text-3xl font-bold mb-2">R$ 59,00</div>
                     <div className="text-sm opacity-90">Pagamento único</div>
                   </div>
 
