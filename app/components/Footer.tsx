@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white py-1">
       <div className="container mx-auto px-4 text-center">
-        <p>&copy; 2025 Concursy. Todos os direitos reservados.</p>
+        <p>&copy; {new Date().getFullYear()} Concursy. Todos os direitos reservados.</p>
       </div>
 
       <div className="text-center text-gray-400">

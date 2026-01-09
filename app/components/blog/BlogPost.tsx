@@ -1,6 +1,19 @@
 import Link from "next/link";
 import { Post } from "@/app/lib/posts";
 
+function formatDateBrazilian(dateString: string): string {
+  try {
+    const date = new Date(dateString);
+    return date.toLocaleDateString("pt-BR", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  } catch {
+    return dateString;
+  }
+}
+
 export default function BlogPost({ post }: { post: Post }) {
   if (!post) return null;
 
@@ -15,19 +28,13 @@ export default function BlogPost({ post }: { post: Post }) {
         </Link>
 
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-          <img
-            src={post.coverImage}
-            alt={post.title}
-            className="w-full h-[400px] object-cover"
-          />
-          
           <div className="p-8">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
               {post.title}
             </h1>
             
             <div className="flex items-center text-sm text-gray-500 mb-8">
-              <time dateTime={post.date}>{post.date}</time>
+              <time dateTime={post.date}>{formatDateBrazilian(post.date)}</time>
               <span className="mx-2">•</span>
               <span>{post.readingTime} min de leitura</span>
             </div>
