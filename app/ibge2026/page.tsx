@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
 import {
-  Clock,
   CheckCircle,
   Star,
   FileText,
@@ -184,17 +183,6 @@ const IBGE2026Page = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-custom-blue to-cyan-800 text-custom-white py-16">
         <div className="container mx-auto px-4 text-center">
-          {/* Urgency Banner */}
-          <div className="bg-red-600 text-white py-3 px-6 rounded-full inline-block mb-8 animate-pulse">
-            <div className="flex items-center justify-center space-x-2">
-              <Clock className="w-5 h-5" />
-              <span className="font-semibold">
-                OFERTA ESPECIAL EXPIRA EM: {timeLeft.days}d {timeLeft.hours}h{" "}
-                {timeLeft.minutes}m {timeLeft.seconds}s
-              </span>
-            </div>
-          </div>
-
           <h1 className="text-4xl md:text-5xl text-custom-white mb-4 sm:mb-6 font-bold leading-tight">
             Simulados IBGE 2026: Agente Recenseamento
             <span className="block text-yellow-400">
@@ -210,35 +198,6 @@ const IBGE2026Page = () => {
             </span>{" "}
             totalmente alinhados ao edital oficial. Com <span className="font-semibold">9.580 vagas</span> disponíveis e remuneração de <span className="font-semibold">R$ 2.676,24</span>, esta é sua oportunidade de trabalhar no Censo 2026!
           </p>
-
-          <div className="bg-custom-white/10 backdrop-blur-sm rounded-xl p-6 mb-8 max-w-2xl mx-auto">
-            <div className="flex justify-center items-center space-x-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400">
-                  {timeLeft.days}
-                </div>
-                <div className="text-sm">DIAS</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400">
-                  {timeLeft.hours}
-                </div>
-                <div className="text-sm">HORAS</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400">
-                  {timeLeft.minutes}
-                </div>
-                <div className="text-sm">MIN</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400">
-                  {timeLeft.seconds}
-                </div>
-                <div className="text-sm">SEG</div>
-              </div>
-            </div>
-          </div>
 
           <div className="flex justify-center flex-wrap gap-4">
             <button
@@ -459,36 +418,6 @@ const IBGE2026Page = () => {
           <p className="text-xl text-[#f2f2f2] mb-8 max-w-3xl mx-auto">
             Garanta sua vantagem e chegue na prova do IBGE muito mais preparado! Com <strong>9.580 vagas</strong> disponíveis para Agente Recenseamento e prova marcada para <strong>1º de março de 2026</strong>, esta é sua chance de conquistar uma remuneração de <strong>R$ 2.676,24</strong> trabalhando no Censo 2026. Quem quer a vaga, estuda do jeito certo. E isso começa por aqui: 3 simulados completos de alta qualidade, totalmente alinhados ao edital oficial e focados nas 4 disciplinas que realmente caem na prova.
           </p>
-
-          <div className="bg-custom-white/10 backdrop-blur-sm rounded-xl p-6 mb-8 max-w-md mx-auto">
-            <div className="text-sm mb-2">OFERTA EXPIRA EM:</div>
-            <div className="flex justify-center items-center space-x-4">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-400">
-                  {timeLeft.days}
-                </div>
-                <div className="text-xs">DIAS</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-400">
-                  {timeLeft.hours}
-                </div>
-                <div className="text-xs">HORAS</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-400">
-                  {timeLeft.minutes}
-                </div>
-                <div className="text-xs">MIN</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-yellow-400">
-                  {timeLeft.seconds}
-                </div>
-                <div className="text-xs">SEG</div>
-              </div>
-            </div>
-          </div>
 
           <div className="flex justify-center flex-wrap gap-4">
             <button
