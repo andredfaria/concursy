@@ -51,6 +51,32 @@ const IBGE2026Page = () => {
     return () => clearInterval(timer);
   }, []);
 
+  // MAV Code - Criar inputs hidden no body
+  useEffect(() => {
+    const accountInput = document.getElementById('accountID');
+    const accountPageInput = document.getElementById('accountPageID');
+    
+    // Valores dos inputs
+    const accountValue = 'a3bf3f3e-8e3f-11f0-8209-0f951de5b1db';
+    const accountPageValue = 'be6b2d18-f17a-11f0-8c19-73971664826e';
+    
+    if (!accountInput) {
+      const input1 = document.createElement('input');
+      input1.type = 'hidden';
+      input1.id = 'accountID';
+      input1.value = accountValue;
+      document.body.appendChild(input1);
+    }
+    
+    if (!accountPageInput) {
+      const input2 = document.createElement('input');
+      input2.type = 'hidden';
+      input2.id = 'accountPageID';
+      input2.value = accountPageValue;
+      document.body.appendChild(input2);
+    }
+  }, []);
+
   const toggleFaq = (index: number) => {
     setFaqOpen((prev) => ({ ...prev, [index]: !prev[index] }));
   };
@@ -176,6 +202,20 @@ const IBGE2026Page = () => {
           />
         </noscript>
         {/* End Meta Pixel Code */}
+
+        {/* MAV Code - Google Tag Manager */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-M7FNJJJ2');
+            `,
+          }}
+        />
+        {/* End MAV Code */}
       </Head>
 
       <Header />
