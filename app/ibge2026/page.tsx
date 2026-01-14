@@ -222,37 +222,52 @@ const IBGE2026Page = () => {
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-custom-blue to-cyan-800 text-custom-white py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl text-custom-white mb-4 sm:mb-6 font-bold leading-tight">
-            Simulados IBGE 2026: Agente Recenseamento
-            <span className="block text-yellow-400">
-              Conquiste sua Vaga no Censo 2026!
-            </span>
-          </h1>
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* Coluna 1: Texto */}
+            <div className="text-center md:text-left">
+              <h1 className="text-4xl md:text-5xl text-custom-white mb-4 sm:mb-6 font-bold leading-tight">
+                Simulados IBGE 2026: Agente Recenseamento
+                <span className="block text-yellow-400">
+                  Conquiste sua Vaga no Censo 2026!
+                </span>
+              </h1>
 
-          <p className="text-custom-white text-lg sm:text-xl mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed">
-            A preparação completa e eficaz para o concurso temporário do IBGE 2026.
-            <span className="font-semibold">
-              {" "}
-              3 simulados completos com 60 questões cada
-            </span>{" "}
-            totalmente alinhados ao edital oficial. Com <span className="font-semibold">9.580 vagas</span> disponíveis e remuneração de <span className="font-semibold">R$ 2.676,24</span>, esta é sua oportunidade de trabalhar no Censo 2026!
-          </p>
+              <p className="text-custom-white text-lg sm:text-xl mb-6 sm:mb-8 leading-relaxed">
+                A preparação completa e eficaz para o concurso temporário do IBGE 2026.
+                <span className="font-semibold">
+                  {" "}
+                  3 simulados completos com 60 questões cada
+                </span>{" "}
+                totalmente alinhados ao edital oficial. Com <span className="font-semibold">9.580 vagas</span> disponíveis e remuneração de <span className="font-semibold">R$ 2.676,24</span>, esta é sua oportunidade de trabalhar no Censo 2026!
+              </p>
 
-          <div className="flex justify-center flex-wrap gap-4">
-            <button
-              className="bg-gradient-to-r from-[#37718a] to-[#040009] text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:from-[#4a839b] hover:to-[#1a0c12] transition-all duration-300 transform hover:scale-105 text-xl"
-              onClick={() => {
-                window.location.href = "https://pay.hotmart.com/Y102890841T";
-              }}
-            >
-              QUERO GARANTIR MINHA VAGA POR R$ 59,00
-            </button>
+              <div className="flex justify-center md:justify-start flex-wrap gap-4">
+                <button
+                  className="bg-gradient-to-r from-[#37718a] to-[#040009] text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:from-[#4a839b] hover:to-[#1a0c12] transition-all duration-300 transform hover:scale-105 text-xl"
+                  onClick={() => {
+                    window.location.href = "https://pay.hotmart.com/Y102890841T";
+                  }}
+                >
+                  QUERO GARANTIR MINHA VAGA POR R$ 59,00
+                </button>
+              </div>
+
+              <p className="mt-4 text-sm text-[#f2f2f2] opacity-90">
+                💳 Pagamento 100% Seguro | 🛡️ 7 dias de Garantia
+              </p>
+            </div>
+
+            {/* Coluna 2: Imagem */}
+            <div className="flex justify-center md:justify-end">
+              <img
+                src="https://www.infomoney.com.br/wp-content/uploads/2025/02/ibge.jpg?quality=70"
+                alt="Agente do IBGE realizando recenseamento no Censo 2026"
+                className="w-full max-w-lg mx-auto rounded-xl shadow-2xl object-cover"
+                loading="lazy"
+              />
+            </div>
           </div>
-
-          <p className="mt-4 text-sm text-[#f2f2f2] opacity-90">
-            💳 Pagamento 100% Seguro | 🛡️ 7 dias de Garantia
-          </p>
         </div>
       </section>
 
