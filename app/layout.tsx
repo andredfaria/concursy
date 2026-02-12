@@ -107,6 +107,13 @@ export default function RootLayout({
             `,
           }}
         />
+        {/* Ackee Tracker */}
+        <Script
+          src="https://testes-ackee.jqd7au.easypanel.host/tracker.js"
+          data-ackee-server="https://testes-ackee.jqd7au.easypanel.host"
+          data-ackee-domain-id="c7ad6816-9c58-452e-b387-155b8a81ca8f"
+          strategy="afterInteractive"
+        />
         {/* Meta tags Open Graph */}
         <meta
           property="og:title"
