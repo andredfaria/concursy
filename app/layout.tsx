@@ -108,12 +108,8 @@ export default function RootLayout({
           }}
         />
         {/* Ackee Tracker */}
-        <Script
-          src="https://testes-ackee.jqd7au.easypanel.host/tracker.js"
-          data-ackee-server="https://testes-ackee.jqd7au.easypanel.host"
-          data-ackee-domain-id="c7ad6816-9c58-452e-b387-155b8a81ca8f"
-          strategy="afterInteractive"
-        />
+        <script async src="https://eficienciia-ackee.jqd7au.easypanel.host/tracker.js" data-ackee-server="https://eficienciia-ackee.jqd7au.easypanel.host" data-ackee-domain-id="e3a2bcac-0ce7-461e-a15a-bc878d0250b3"></script>
+        
         {/* Meta tags Open Graph */}
         <meta
           property="og:title"
